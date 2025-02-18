@@ -8,7 +8,7 @@ const Home = () => {
   const [category, setCategory] = useState("All");
   const [todos, setTodos] = useState(null);
   const [isEdit, setIsEdit] = useState(false);
-  const [status, setStatus] = useState('active'); // Default status is 'active'
+  const [status, setStatus] = useState('active'); 
 
   const handleCategory = (category) => {
     setCategory(category);
@@ -87,7 +87,7 @@ const Home = () => {
           <h2 className='font-bold text-4xl m-4 text-cyan-600'>Todo App</h2>
         </div>
         <div className='flex gap-3'>
-          <input value={task} onChange={e => setTask(e.target.value)} type='text' placeholder='Enter todo' className='w-64 p-2 outline-none border border-blue-300 rounded-md' />
+          <input value={task} onChange={e => setTask(e.target.value)} type='text' placeholder='Enter a Task' className='w-64 p-2 outline-none border border-blue-300 rounded-md' />
           <>
             {isEdit ? <button className='bg-blue-600 text-white px-4 rounded-md' onClick={updateTask}>Update</button> : <button className='bg-blue-600 text-white px-4 rounded-md' onClick={handleAddTask}>add</button>}
           </>
